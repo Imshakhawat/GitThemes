@@ -1,0 +1,83 @@
+{
+    "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+    "final_space": true,
+    "blocks": [
+        {
+            "type": "prompt",
+            "alignment": "left",
+            "segments": [
+                {
+                    "type": "session",
+                    "style": "diamond",
+                    "foreground": "#ffffff",
+                    "background": "#B4009E",
+                    "leading_diamond": "\uE0B6",
+                    "trailing_diamond": "",
+                    "properties": {
+                        "prefix": "",
+                        "display_host": false
+                    }
+                },
+                {
+                    "type": "path",
+                    "style": "powerline",
+                    "powerline_symbol": "\uE0B0",
+                    "foreground": "#000000",
+                    "background": "#FFFF00",
+                    "properties": {
+                        "style": "folder"
+                    }
+                },
+                {
+          "type": "git",
+          "style": "powerline",
+          "powerline_symbol": " ",
+          "foreground": "#ffffff",
+          "background": "#0c55f2",
+          "properties": {
+            "display_status_detail": true,
+            "branch_icon": " ",
+            "branch_identical_icon": "≡",
+            "branch_ahead_icon": "↑",
+            "branch_behind_icon": "↓",
+            "branch_gone": "≢",
+            "local_working_icon": "",
+            "local_staged_icon": "",
+            "stash_count_icon": "",
+            "commit_icon": "▷ ",
+            "tag_icon": "▶ ",
+            "rebase_icon": "Ɫ ",
+            "cherry_pick_icon": "✓ ",
+            "merge_icon": "◴ ",
+            "no_commits_icon": "[no commits]",
+            "status_separator_icon": " │",
+            "status_colors_enabled": true,
+            "color_background": true,
+            "local_changes_color": "#5faaf5"
+          }
+                },
+                {
+                    "type": "node",
+                    "style": "powerline",
+                    "powerline_symbol": "\uE0B0",
+                    "foreground": "#ffffff",
+                    "background": "#4e903d",
+                    "properties": {
+                        "prefix": " \uE718 "
+                    }
+                },
+                {
+                    "type": "time",
+                    "style": "diamond",
+                    "trailing_diamond": "\uE0B0",
+                    "foreground": "#ffffff",
+                    "background": "#16C60C",
+                    "properties": {
+                        "prefix": " \u2665 ",
+                        "time_format": "15:04"
+                    }
+                }
+            ]
+        }
+    ]
+}
