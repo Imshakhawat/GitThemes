@@ -15,9 +15,12 @@
                     "trailing_diamond": "",
                     "properties": {
                         "prefix": "",
+						"postfix": "\u2800",// invisible spacing character
                         "display_host": false
                     }
                 },
+				
+				
                 {
                     "type": "path",
                     "style": "powerline",
@@ -25,9 +28,14 @@
                     "foreground": "#000000",
                     "background": "#FFFF00",
                     "properties": {
-                        "style": "folder"
+						"prefix": "\u2800",
+                        "style": "folder",
+						"postfix": "\u2800"// invisible spacing character
                     }
                 },
+				
+				
+				
                 {
           "type": "git",
           "style": "powerline",
@@ -35,6 +43,8 @@
           "foreground": "#ffffff",
           "background": "#0c55f2",
           "properties": {
+			  
+			  "postfix": "\u2800",// invisible spacing character
             "display_status_detail": true,
             "branch_icon": " ",
             "branch_identical_icon": "≡",
@@ -56,6 +66,9 @@
             "local_changes_color": "#5faaf5"
           }
                 },
+				
+				
+				
                 {
                     "type": "node",
                     "style": "powerline",
@@ -63,7 +76,10 @@
                     "foreground": "#ffffff",
                     "background": "#4e903d",
                     "properties": {
-                        "prefix": " \uE718 "
+                        "prefix": "⭐ ",//needs to change here
+                        
+						"postfix": "\u2800"
+						
                     }
                 },
                 {
@@ -73,11 +89,16 @@
                     "foreground": "#ffffff",
                     "background": "#16C60C",
                     "properties": {
-                        "prefix": " \u2665 ",
-                        "time_format": "15:04"
+                        "prefix": "\u2800\u2665 ",
+						"postfix": "\u2800",
+                        "template":  "{{.CurrentDate | date \"3:04:05 PM\" | lower}}"
+                        // "template":  "{{.CurrentDate | date \"Mon 2-Jan-2006 3:04:05 PM\" | lower}}"
                     }
                 }
             ]
         }
     ]
 }
+
+//links that helped me to solve the spacing problem:
+//1.https://superuser.com/questions/1700088/broken-oh-my-posh-on-windows-terminal?newreg=6efa68fca4394ff8963e6fba88a30c73
